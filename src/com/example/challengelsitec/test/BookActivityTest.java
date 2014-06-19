@@ -38,7 +38,8 @@ public class BookActivityTest extends ActivityInstrumentationTestCase2<BookActiv
 			e.printStackTrace();
 			Log.e("HW"," IOException" + e.getMessage());
 		}
-		String book = mainActivity.parseXML(inputStream);
+		StringBuilder stringBuilder = mainActivity.parseXML(inputStream);
+		String book =  stringBuilder.toString();
 	    assertEquals("", book);
 	}
 	
@@ -53,7 +54,8 @@ public class BookActivityTest extends ActivityInstrumentationTestCase2<BookActiv
 			e.printStackTrace();
 			Log.e("HW"," IOException" + e.getMessage());
 		}
-		String book = mainActivity.parseXML(inputStream);
+		StringBuilder stringBuilder = mainActivity.parseXML(inputStream);
+		String book =  stringBuilder.toString();
 	    assertEquals("Paragrafo 2".trim(), book.trim());
 	}
 	
@@ -68,7 +70,8 @@ public class BookActivityTest extends ActivityInstrumentationTestCase2<BookActiv
 			e.printStackTrace();
 			Log.e("HW"," IOException" + e.getMessage());
 		}
-		String book = mainActivity.parseXML(inputStream);
+		StringBuilder stringBuilder = mainActivity.parseXML(inputStream);
+		String book =  stringBuilder.toString();
 	    assertEquals("Glowsticks. Candles are NOT to be used because of gas leaks, explosive matter, flammable matter in the area.".trim(), book.trim());
 	}
 	
@@ -83,7 +86,8 @@ public class BookActivityTest extends ActivityInstrumentationTestCase2<BookActiv
 			e.printStackTrace();
 			Log.e("HW"," IOException" + e.getMessage());
 		}
-		String book = mainActivity.parseXML(inputStream);
+		StringBuilder stringBuilder = mainActivity.parseXML(inputStream);
+		String book =  stringBuilder.toString();
 	    assertEquals("Texto".trim(), book.trim());
 	}
 	
@@ -98,7 +102,8 @@ public class BookActivityTest extends ActivityInstrumentationTestCase2<BookActiv
 			e.printStackTrace();
 			Log.e("HW"," IOException" + e.getMessage());
 		}
-		String book = mainActivity.parseXML(inputStream);
+		StringBuilder stringBuilder = mainActivity.parseXML(inputStream);
+		String book =  stringBuilder.toString();
 	    assertEquals("www.daisyindia.org".trim(), book.trim());
 	}
 	
@@ -113,7 +118,8 @@ public class BookActivityTest extends ActivityInstrumentationTestCase2<BookActiv
 			e.printStackTrace();
 			Log.e("HW"," IOException" + e.getMessage());
 		}
-		String book = mainActivity.parseXML(inputStream);
+		StringBuilder stringBuilder = mainActivity.parseXML(inputStream);
+		String book =  stringBuilder.toString();
 		String output = "Fix potential hazards in your home. Once you've identified potential disaster scenarios, thoroughly inspect your house and try to make it as safe as possible. Here are just a few examples:";
 	    assertEquals(output.trim(), book.trim());
 	}
@@ -129,7 +135,8 @@ public class BookActivityTest extends ActivityInstrumentationTestCase2<BookActiv
 			e.printStackTrace();
 			Log.e("HW"," IOException" + e.getMessage());
 		}
-		String book = mainActivity.parseXML(inputStream);
+		StringBuilder stringBuilder = mainActivity.parseXML(inputStream);
+		String book =  stringBuilder.toString();
 		assertTrue(book.startsWith("www.daisyindia.org"));
 		assertTrue(book.contains("www.daisyindia.org".trim()));
 		assertTrue(book.contains("capabilities that survived".trim()));
